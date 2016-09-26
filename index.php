@@ -10,7 +10,14 @@
         
         <div id="page">
 
+            <?php
 
+            $top_title = ''; // additional title with no value
+            $status_items = array('Non traitée','En cours','Terminée','Refusée');
+            $status_label = array('new','in-progress','done','declined');
+
+            include('inc/custom-select.inc.php');
+            ?>
 
         </div><!-- #page -->
         
