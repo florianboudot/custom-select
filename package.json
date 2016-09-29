@@ -1,6 +1,6 @@
 {
-    "name": "Legrand",
-    "description": "Package de gestion du site Legrand",
+    "name": "Custom select",
+    "description": "Package de gestion",
     "version": "0.0.1",
     "private": true,
     "scripts": {
