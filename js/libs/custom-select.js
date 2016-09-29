@@ -40,6 +40,7 @@ var selectSkin = (function () {
             // bind radios
             $radios.on('change', function(){
                 $items.each(selectItem);
+                $select.trigger('done');
             });
 
             // bind labels
