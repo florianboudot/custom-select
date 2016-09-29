@@ -16,6 +16,8 @@
     $status_label = array('new','in-progress','done','declined');
 
     include('inc/custom-select.inc.php');
+    include('inc/custom-select.inc.php');
+    include('inc/custom-select.inc.php');
     ?>
 </div>
 

@@ -1,43 +1,24 @@
-
 //generic colors
 $color-legrand: #FF9600;
-$color-orange: #ff592a;
 $color-red: #f33333;
-$color-purple: #bd3073;
 $color-green: #4ec775;
-$color-white: #FFF;
-$color-black: #202020;
-$color-black2: #404040;
 
 //specific for text
 $color-text-grey: #A0A0A0;
-$color-text-unactive: #C7C7C7;
-$color-text-active: #777777;
 
 //specific for background
 $color-background-light: #F3F2F1;
 $color-background-dark: #393837;
 
-//color for forms
-$color-form-error: #BE2A2A;
-$color-form-valid: #5CB62F;
-
 //other colors
 $color-border-block: #E0E0E0;
-$color-border-text: #CCC;
+
 $color-line-title: #707070;
 
 /* CUSTOM SELECT */
 .custom-select-container {
     position: relative;
     min-height: 30px;
-
-    .title-container & {
-        min-width: 190px;
-        @include mq ($from: desktop) {
-            margin-left: 10px;
-        }
-    }
 
     .form-item & {
         padding-top: 7px;
@@ -46,45 +27,16 @@ $color-line-title: #707070;
 
     .tools & {
         margin-bottom: 10px;
-
-        @include mq ($from: desktop) {
-            margin-left: 10px;
-            margin-bottom: 0;
-        }
     }
 }
+
 .custom-inside {
     position: absolute;
     max-width: 190px;
-
-    .form-item &,
-    .tools &,
-    .application &,
-    .title-container-center & {
-        left: 0;
-        right: 0;
-        max-width: none;
-    }
-
-    .title-container-2 & {
-        @include mq ($from: desktop) {
-            right:0;
-        }
-    }
-
-    @include mq ($from: desktop) {
-        .tools & {
-            left: auto;
-            right: auto;
-        }
-        .application &{
-            left: auto;
-            right:0;
-        }
-    }
 }
+
 .custom-select {
-    border:1px solid $color-line-title;
+    border: 1px solid $color-line-title;
     border-radius: 15px;
     transition: all 0.15s ease-out;
     overflow: hidden;
@@ -99,13 +51,13 @@ $color-line-title: #707070;
         pointer-events: none;
         content: '';
         position: absolute;
-        right:15px;
-        top:11px;
+        right: 15px;
+        top: 11px;
         width: 0;
         height: 0;
         border-style: solid;
         border-width: 5px 5px 0 5px;
-        border-color: $color-black transparent transparent transparent;
+        border-color: #000 transparent transparent transparent;
         transition: all 0.2s ease-out;
     }
 
@@ -126,14 +78,14 @@ $color-line-title: #707070;
     }
 
     .cs-link.cs-label {
-        background:$color-background-light;
+        background: $color-background-light;
         white-space: normal;
     }
 
     input {
         position: absolute;
-        left:-30px;
-        top:0;
+        left: -30px;
+        top: 0;
     }
 
     /* SELECTED ITEM */
@@ -143,19 +95,18 @@ $color-line-title: #707070;
     }
 
     .cs-selected-item .cs-label {
-        color: $color-black;
+        color: #000;
     }
-
 
     /* COLORS */
     &.status-new {
-        border-color:$color-red;
+        border-color: $color-red;
 
         &.is-open {
-            border:1px solid $color-border-block;
+            border: 1px solid $color-border-block;
 
             .cs-label:hover {
-                color: $color-black;
+                color: #000;
             }
         }
         .cs-label,
@@ -167,13 +118,13 @@ $color-line-title: #707070;
         }
     }
     &.status-in-progress {
-        border-color:$color-legrand;
+        border-color: $color-legrand;
 
         &.is-open {
-            border:1px solid $color-border-block;
+            border: 1px solid $color-border-block;
 
             .cs-label:hover {
-                color: $color-black;
+                color: #000;
             }
         }
         .cs-label,
@@ -185,13 +136,13 @@ $color-line-title: #707070;
         }
     }
     &.status-done {
-        border-color:$color-green;
+        border-color: $color-green;
 
         &.is-open {
-            border:1px solid $color-border-block;
+            border: 1px solid $color-border-block;
 
             .cs-label:hover {
-                color: $color-black;
+                color: #000;
             }
         }
         .cs-label,
@@ -203,32 +154,31 @@ $color-line-title: #707070;
         }
     }
     &.status-declined {
-        border-color:$color-black;
+        border-color: #000;
 
         &.is-open {
-            border:1px solid $color-border-block;
+            border: 1px solid $color-border-block;
 
             .cs-label:hover {
-                color: $color-black;
+                color: #000;
             }
         }
         .cs-label,
         & .cs-item.status-declined .cs-label {
-            color: $color-black;
+            color: #000;
         }
         &:after {
-            border-color: $color-black transparent transparent transparent;
+            border-color: #000 transparent transparent transparent;
         }
     }
 
     /* IS OPEN */
     &.is-open {
-        box-shadow:0 0 11px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 0 11px rgba(0, 0, 0, 0.05);
         z-index: 3; // on top
         position: relative;
 
         .cs-item {
-            //display: block;
             height: auto;
         }
         .cs-label {
@@ -239,7 +189,7 @@ $color-line-title: #707070;
             }
         }
         .cs-selected-item .cs-label {
-            color: $color-black;
+            color: #000;
         }
         &:after {
             border-color: $color-border-block transparent transparent transparent;

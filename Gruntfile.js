@@ -7,7 +7,6 @@ module.exports = function (grunt) {
     // Load tasks
 
     grunt.loadNpmTasks('grunt-sass');
-    grunt.loadNpmTasks('grunt-combine-media-queries');
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -103,18 +102,6 @@ module.exports = function (grunt) {
             }
         },
 
-        // Combine media queries
-        cmq: {
-            options: {
-                log: true
-            },
-            prod: {
-                files: {
-                    'styles': [cssDestinationPath + '*.css']
-                }
-            }
-        },
-
         // Add vendor prefixed styles
         postcss: isbuild ? optionsProdPostCSS : optionsDevPostCSS,
         // watch changes
@@ -153,8 +140,8 @@ module.exports = function (grunt) {
     });
 
     // Register tasks
-    grunt.registerTask('s', ['sass:dev', 'cmq', 'postcss']);
+    grunt.registerTask('s', ['sass:dev', 'postcss']);
     grunt.registerTask('fw', ['s', 'watch:css']);
-    grunt.registerTask('build', ['sass:prod', 'cmq', 'postcss', 'uglify']);
+    grunt.registerTask('build', ['sass:prod', 'postcss', 'uglify']);
     grunt.registerTask('default', ['watch']);
 };
