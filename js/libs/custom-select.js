@@ -21,6 +21,7 @@ var selectSkin = (function () {
                         $select.removeClass(container_status[0]);
                     }
                     $select.addClass(status_class[0]);
+                    $select.data('status',status_class[0]);
                 }
 
                 $item.addClass('cs-selected-item');
